@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datavalue Types in JS</title>
+</head>
+<body>
+<script>
+    //Primitive : Single Value (Immutable)
+     //String/Number/Boolean/Null/Undefined/Symbol/BigInt
+      let name = "Abcd";
+
+      let age = 23;
+      let isMarried=false;
+      let address = null;
+      let education;
+      console.log(age);
+      console.log(typeof(age));
+      
+      //Bigintage
+
+      let salary = BigInt(273498793248293989874);
+      console.log(salary);
+
+      //symbol
+      /* let student = {
+      let name1 = "asdf",
+      let name2 = "asdf"
+      console.log(Symbol(name1==name2)); */
+    //Non - primitive/Refrence/object(Mutable)
+     // Object / Array / Function
+     //object
+     let student={
+        name : "Ansh",
+        age : 19,
+        isMarried:false,
+        address:{
+            streetno:562,
+            area:"Banda",
+            pincode:210001,
+            city:"gzb"
+                },
+    course:"Btech"
+ 
+     };
+     console.log(student.name);
+     // Find object,s property in object
+     console.log("age" in student)
+      // delete object,s property in object
+     console.log(delete student.name);
+     console.log( student);
+     console.log("name" in student);
+     //access objects key /property using bracket notation
+     console.log(student ['isMarried']);
+</script>    
+</body>
+</html>

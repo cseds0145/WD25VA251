@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions html</title>
+</head>
+<body>
+    <script>
+        // IIFE using traditional function
+        (function(a, b) {
+            console.log(`First parameter ${a} and Second parameter ${b}`);
+            var res = a + b;
+            console.log(`Result is ${res}`);
+        })(3, 5);
+
+        // IIFE using arrow function
+        (() => console.log("Hello life"))();
+
+        // Promise example
+        let promise = new Promise(function(resolve, reject) {
+            let age = 25;
+            if (age >= 18) {
+                resolve("valid age");
+            } else {
+                reject("wait for next year");
+            }
+        });
+
+        promise
+            .then(msg => console.log(msg))
+            .catch(error => console.log(error));
+
+        // Async/Await with fetch
+        async function userDatabase() {
+            try {
+                let response = await fetch('https://dummyjson.com/products');
+                let responseData = await response.json();
+                console.log("Fetched data:", responseData);
+            } catch (error) {
+                console.log("Error fetching data:", error);
+            }
+        }
+        userDatabase();
+
+        // Object to JSON and localStorage
+        let myinfo = {
+            name: "Ansh",
+            age: 19,
+            mob: 6390024309,
+            email: "ansh6300@gmail.com"
+        };
+
+        // Convert object into JSON string
+        let myInfodata = JSON.stringify(myinfo);
+        localStorage.setItem("preference", myInfodata);
+
+        // Retrieve from localStorage
+        let getmyinfolocaldata = localStorage.getItem("preference");
+        console.log("LocalStorage data:", getmyinfolocaldata);
+    </script>
+</body>
+</html>
