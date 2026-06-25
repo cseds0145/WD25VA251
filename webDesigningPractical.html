@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Style on Click</title>
+  <style>
+    #myText {
+      font-size: 16px;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <p id="myText">Click the button to change my style!</p>
+  <button onclick="changeStyle()">Click Me</button>
+
+  <script>
+    function changeStyle() {
+      // Change background color
+      document.body.style.backgroundColor = "lightblue";
+
+      // Change text color
+      document.getElementById("myText").style.color = "darkred";
+
+      // Increase font size
+      document.getElementById("myText").style.fontSize = "24px";
+    }
+  </script>
+</body>
+</html>
